@@ -1,19 +1,41 @@
+import bcrypt from 'bcryptjs';
 const data={
+    users:[
+        {
+            nama:'rul',
+            email:'rul@yahoo.com',
+            password:bcrypt.hashSync('123',8),
+            isAdmin:true,
+        },
+        {
+            nama:'iwan',
+            email:'iwan@yahoo.com',
+            password:bcrypt.hashSync('123',8),
+            isAdmin:false,
+        }
+    ],
+    pay:[
+        {
+            noId:'1',
+            nama:'rul',
+            responMidtrans:'good'
+        }
+        
+    ],
     products:[
         {
-            _id:'1',
-            nama:'Fortuner',
+            nama:'Fortuner1',
             category:'Car',
             image:'/image/fortuner.jpg',
             price:30001,
             brand:'toyota',
             rating:4.5,
             numReviews:10,
-            description:'sport car'
+            description:'sport car',
+            countInStock:3
         },
         {
-            _id:'2',
-            nama:'Fortuner',
+            nama:'Fortuner2',
             category:'Car',
             image:'/image/fortuner.jpg',
             price:30002,
@@ -24,7 +46,6 @@ const data={
             countInStock:10
         },
         {
-            _id:'3',
             nama:'Harrier',
             category:'Car',
             image:'/image/New-Harrier-Specs.jpg',
@@ -36,20 +57,18 @@ const data={
             countInStock:3
         },
         {
-            _id:'4',
-            nama:'Fortuner',
+            nama:'Fortuner3',
             category:'Car',
             image:'/image/fortuner.jpg',
             price:30004,
             brand:'toyota',
             rating:4.5,
-            numReviews:10,
+            numReviews:12,
             description:'sport car',
             countInStock:0
         },
         {
-            _id:'5',
-            nama:'Fortuner',
+            nama:'Fortuner4',
             category:'Car',
             image:'/image/fortuner.jpg',
             price:30005,
@@ -57,11 +76,10 @@ const data={
             rating:4.5,
             numReviews:10,
             description:'sport car',
-            countInStock:0
+            countInStock:1
         },
         {
-            _id:'6',
-            nama:'Fortuner',
+            nama:'Fortuner5',
             category:'Car',
             image:'/image/fortuner.jpg',
             price:30006,
